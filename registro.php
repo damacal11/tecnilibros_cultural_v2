@@ -6,8 +6,8 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'Crear cuenta') {
          // Mensaje de error para la alerta
          $mensaje = "Error: Uno de los campos está vacío.";
 
-         // Generar el script JavaScript que mostrará la alerta
-         echo "<script>alert('$mensaje');</script>";
+         // Generar el script JavaScript que mostrará la alerta y redirigirá a index.php
+         echo "<script>alert('$mensaje'); window.location.href = 'index.php';</script>";
     } else {
         // Incluir el archivo de conexión a la base de datos
         include("conexion_bd.php");
@@ -34,11 +34,11 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'Crear cuenta') {
         $result = mysqli_stmt_execute($statement);
 
         if($result) {
-            // Éxito: redirigir al usuario a alguna página de éxito o mostrar un mensaje
-            echo "Registro exitoso!";
+            // Éxito: mostrar un mensaje de éxito en un alert y redirigir a index.php
+            echo "<script>alert('Registro exitoso!'); window.location.href = 'index.php';</script>";
         } else {
-            // Error: mostrar un mensaje de error o redirigir al usuario a una página de error
-            echo "Error al registrar usuario: " . mysqli_error($conexion);
+            // Error: mostrar un mensaje de error en un alert y redirigir a index.php
+            echo "<script>alert('Error al registrar usuario: " . mysqli_error($conexion) . "'); window.location.href = 'index.php';</script>";
         }
 
         // Cerrar la declaración preparada

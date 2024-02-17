@@ -18,7 +18,7 @@
             <li><a class="boton" href="historial.html">Historial</a></li>
             <li><a class="boton" href="proveedores.html">Proveedores</a></li>
             <li><a class="boton" href="administrar.html">Administrar</a></li>
-            <li><a class="boton" href="index.html">Cerrar Sesión</a></li>
+            <li><a class="boton" href="index.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
 
@@ -31,12 +31,32 @@
         <div class="notifications">
             <h2>Últimas Notificaciones</h2>
             <ul>
-                <li class="blue-notification">Libros más vendidos</li>
-                <li class="yellow-notification">Restablecer libro más vendido</li>
-                <li class="red-notification">Libro sin existencias</li>
+                <li class="blue-notification">Nuevo libro disponible: "La odisea"</li>
+                <li class="yellow-notification">Se ha restablecido el libro más vendido</li>
+                <li class="red-notification">Atención: Libro "Cien años de soledad" sin existencias</li>
             </ul>
+            
         </div>
         
     </div>
+    <!-- Agregar este script al final del archivo -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Realizar una solicitud AJAX para obtener las últimas notificaciones
+        $.ajax({
+            url: 'obtener_notificaciones.php',
+            type: 'GET',
+            success: function(data) {
+                // Manipular los datos obtenidos y mostrarlos en la página
+                $('.notifications ul').html(data);
+            },
+            error: function() {
+                alert('Error al obtener las notificaciones.');
+            }
+        });
+    });
+</script>
+
 </body>
 </html>

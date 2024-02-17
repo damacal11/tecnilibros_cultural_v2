@@ -218,34 +218,33 @@ body {
 .notifications li {
   margin-bottom: 10px;
 }
+/*definicion de variables*/
+:root {
+  --blue-notification-bg: #A2B2FD;
+  --blue-notification-text: #fff;
+  --yellow-notification-bg: #FFE785;
+  --yellow-notification-text: #000;
+  --red-notification-bg: #F17871;
+  --red-notification-text: #fff;
+}
+
 
 /* Estilos para las notificaciones con colores de prioridad */
-.blue-notification,
-.yellow-notification,
-.red-notification {
-  display: inline-flexbox;
-  padding: 10px 16px;
-  background-color: #A2B2FD;
-  color: rgb(10, 10, 10);
-  border: 1px solid #666;
-  border-radius: 4px;
-  margin-right: 15px;
-  text-decoration: none;
-  cursor: pointer;
+.blue-notification {
+  background-color: var(--blue-notification-bg);
+  color: var(--blue-notification-text);
 }
 
 .yellow-notification {
-  background-color: #FFE785;
+  background-color: var(--yellow-notification-bg);
+  color: var(--yellow-notification-text);
 }
 
 .red-notification {
-  background-color: #F17871;
+  background-color: var(--red-notification-bg);
+  color: var(--red-notification-text);
 }
 
-.store-image {
-  text-align: center;
-  width: 60%;
-}
 
 /*TERMINA NOTIFICACIONES INICIO.HTML */
 /*tamaño de las imagenes */
@@ -324,3 +323,5 @@ th {
   display: block;
   margin: 0 auto;
 }
+
+

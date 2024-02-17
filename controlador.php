@@ -17,10 +17,10 @@ if (!empty($_POST["username"]) && !empty($_POST["password"])) {
         exit();
     } else {
         // Acceso denegado
-        echo "Acceso denegado. Por favor, verifique sus credenciales.";
+        echo "<script>alert('Acceso denegado. Por favor, verifique sus credenciales.'); window.location.href = 'index.php';</script>";
     }
 } else {
     // Los campos están vacíos
-    echo "Por favor, complete todos los campos.";
+    echo "<script>alert('Por favor, complete todos los campos.'); window.location.href = 'index.php';</script>";
 }
 ?>
