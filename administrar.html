@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tecnilibros Cultural</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/normalize.css">
+</head>
+<body>
+    <!-- Barra de tareas -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><img src="imagenes/logo.jpg" alt="Logo"></li>
+            <li><a class="boton" href="inicio.html">Inicio</a></li>
+            <li><a class="boton" href="gestionar.html">Gestión</a></li>
+            <li><a class="boton" href="notificaciones.html">Notificaciones</a></li>
+            <li><a class="boton" href="historial.html">Historial</a></li>
+            <li><a class="boton" href="proveedores.html">Proveedores</a></li>
+            <li><a class="boton" href="administrar.html">Administrar</a></li>
+            <li><a class="boton" href="index.html">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+<h1>Panel de Administración</h1>
+
+    <!-- Formulario de Añadir Pedido -->
+    
+    <div class="admin-component">
+        <div class="header custom-margin">
+        <a href="formulario_pedido_libros.html">
+            <img src="imagenes/añadir.png" alt="Añadir Pedido" title="Añadir Pedido" class="icon centered">
+        </a>
+        <img src="imagenes/buscar.png" alt="Buscar" title="Buscar pedido"  class="icon centered">
+        </div>
+        <table>
+            <tr>
+                <th>ID Pedido</th>
+                <th>Proveedor</th>
+                <th>Estado del pedido</th>
+                <th>Libro</th>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Zona Norte</td>
+                <td>Aprovado</td>
+                <td>Cien Años de soledad</td>
+                <td>octubre 2023</td>
+                <td>120</td>
+                <td>
+                    <a href="editar_libro.html">
+                        <img src="imagenes/editar.png" alt="Editar" title="editar" class="icon centered">
+                    </a>
+                    
+                </td>
+        </table>
+    </div>
+
+    <!-- Formulario de Añadir Categoría -->
+<div class="form">   
+    <div class="admin-component">
+        <h2>Añadir Categorías de Libros</h2>
+        <input type="text" placeholder="Nueva Categoría">
+        <button>Añadir</button>
+    </div>
+
+    <!-- Formulario de Añadir Librero -->
+    <div class="admin-component">
+        <h2>Añadir Libreros Disponibles</h2>
+        <input type="text" placeholder="Nuevo Librero">
+        <button>Añadir</button>
+    </div>
+</div>
+    <!-- Formulario de Añadir Información de Librería -->
+    <a href="formulario_pedido.html">
+        <img src="imagenes/añadir.png" alt="Añadir Información de Librería" title="Añadir Información libreria"class="icon centered">
+    </a>
+
+    <!-- Enlace para Ver Ventas -->
+    <a href="ver_ventas.html">
+        <img src="imagenes/aplicar.png" alt="Ver Ventas" title="Ver Ventas" class="icon centered">
+    </a>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tecnilibros Cultural</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/normalize.css">
+</head>
+<body>
+    <!-- Barra de tareas -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><img src="imagenes/logo.jpg" alt="Logo"></li>
+            <li><a class="boton" href="inicio.html">Inicio</a></li>
+            <li><a class="boton" href="gestionar.html">Gestión</a></li>
+            <li><a class="boton" href="notificaciones.html">Notificaciones</a></li>
+            <li><a class="boton" href="historial.html">Historial</a></li>
+            <li><a class="boton" href="proveedores.html">Proveedores</a></li>
+            <li><a class="boton" href="administrar.html">Administrar</a></li>
+            <li><a class="boton" href="index.html">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <div class="gestionary-page">
+        <div class="header custom-margin">
+            <h1>Gestión de Libros</h1>
+            <a href="formulario_libro.html">
+                <img src="imagenes/añadir.png" alt="Añadir libro" title="Añadir libro" class="icon centered">
+            </a>
+        </div>
+
+        <div class="search">
+            <a href="buscar_libro.html">
+            <input type="text" placeholder="Buscar libro">
+            <img src="imagenes/buscar.png" alt="Buscar" title="Buscar libros" class="icon centered">
+        </a>
+        </div>
+
+        <table class="centered-table">
+            <tr>
+                <th>ID</th>
+                <th>TITULO</th>
+                <th>CATEGORIA</th>
+                <th>LIBRERO</th>
+                <th>EDICION</th>
+                <th>PRECIO</th>
+                <th>Acciones</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>CIEN AÑOS DE SOLDEDAD</td>
+                <td>LITERATURA</td>
+                <td>00214</td>
+                <td>4</td>
+                <td>120.000</td>
+                <td>
+                    <a href="editar_libro.html">
+                        <img src="imagenes/editar.png" alt="Editar" title="Editar libros" class="icon centered">
+                    </a>
+                    <a href="eliminar_libro.html">
+                        <img src="imagenes/eliminar.png" alt="Eliminar" title="Eliminar Libros" class="icon centered">
+                    </a>
+                </td>
+            </tr>
+            <!-- Agregar más filas con datos de libros -->
+        </table>
+    </div>
+</body>
+</html>
